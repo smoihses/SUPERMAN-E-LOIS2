@@ -1,0 +1,129 @@
+/* Estilo básico para o corpo da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o tamanho total do elemento inclua padding e border */
+}
+
+body {
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a área */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Evita que a imagem de fundo se repita */
+    color: white; /* Cor do texto */
+    font-family: sans-serif; /* Define a fonte para o texto */
+    background: black;
+}
+
+/* Estilo para a barra superior */
+.topo {
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+    background-color: rgba(53, 47, 47, 0.5); /* Fundo translúcido para destacar o texto */
+}
+
+/* Estilo para o conteúdo dentro da barra superior */
+.topo > div {
+    max-width: 600px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza horizontalmente o conteúdo */
+}
+
+/* Estilo para os links dentro da barra superior */
+.topo > div span {
+    display: inline-block; /* Faz os links ocuparem uma linha separada */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+.topo > div span a {
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    margin: 0 10px; /* Espaçamento entre os links */
+    transition: color 0.3s ease; /* Transição suave para a cor do texto ao passar o mouse */
+}
+
+.topo > div span a:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse sobre os links */
+}
+
+/* Estilo para a imagem de capa */
+.img-capa {
+    width: 50%; /* Ajuste conforme necessário */
+    height: auto;
+    object-fit: cover; /* Mantém a proporção e corta se necessário */
+    display: block; /* Remove espaços extras abaixo da imagem */
+    margin: 5px auto; /* Espaçamento superior e centraliza horizontalmente */
+}
+
+/* Estilo para as seções "Sinopse" e "Disponibilidade" */
+.secao {
+    background-color: rgba(224, 219, 219, 0.5); /* Fundo translúcido para as seções */
+    padding: 10px; /* Espaçamento interno */
+    margin-top: 10px; /* Espaçamento superior */
+}
+
+/* Estilo para os títulos das seções */
+.secao h2 {
+    color: white; /* Cor do texto */
+    font-size: 1.5em; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estilo para o texto dentro das seções */
+.secao p {
+    color: white; /* Cor do texto */
+    line-height: 1.6; /* Altura da linha */
+}
+
+/* Estilo para a galeria de imagens */
+.galeria {
+    display: flex; /* Usa flexbox para layout flexível */
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a próxima linha conforme necessário */
+    gap: 10px; /* Espaçamento entre as imagens */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    margin-bottom: 50px; /* Espaçamento inferior */
+}
+
+/* Estilo para cada imagem na galeria */
+.imagem-sombra {
+    width: 200px; /* Largura fixa para cada imagem */
+    height: 200px; /* Altura fixa para cada imagem */
+    object-fit: cover; /* Mantém a proporção e corta se necessário */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para efeito visual */
+}
+
+/* Estilo para o rodapé da página */
+.rodape {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo translúcido para o rodapé */
+    color: rgb(241, 237, 237); /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+    position: fixed; /* Fixa o rodapé na parte inferior da janela */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    left: 0; /* Alinha o rodapé à esquerda */
+    width: 100%; /* Largura total */
+}
+
+/* Estilo para a imagem do rodapé */
+.img-logo-rodape {
+    width: 50px; /* Ajusta o tamanho da imagem no rodapé */
+    height: auto; /* Mantém a proporção da imagem */
+    vertical-align: middle; /* Alinha a imagem verticalmente ao meio do texto */
+    margin-left: 10px; /* Espaçamento à esquerda da imagem */
+}
+
+/* Estilizando os links "Sinopse" e "Disponibilidade" quando são clicados */
+#sinopse:target,
+#disponibilidade:target {
+    background-color: rgba(255, 255, 0, 0.5); /* Cor de fundo amarelo semitransparente */
+    transition: background-color 0.5s ease; /* Efeito de transição suave */
+}
+
+/* Adiciona foco aos links */
+a:focus {
+    outline: none; /* Remove o outline padrão do navegador */
+}
+
+/* Remove a cor de fundo quando o foco é removido */
+.secao:focus:not(:focus) {
+    background-color: rgba(224, 219, 219, 0.5); /* Cor de fundo original */
+}
